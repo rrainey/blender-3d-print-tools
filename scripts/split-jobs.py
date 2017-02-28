@@ -9,7 +9,7 @@
 #
 # Usage:
 #   Select the object to be "sliced". 
-#   Open a Text Editor windor, load this script. 
+#   Open a Text Editor window, load this script. 
 #   Run this script.
 #
 # Copyright (c) 2017, Riley B Rainey
@@ -105,6 +105,7 @@ for i in range (2,11):
 	bpy.ops.object.mode_set(mode='OBJECT', toggle=False)
 	rem_obj.select = False
 	
+rem_obj.select = True
 basename= os.path.join(home, objname + "%02d" % i + ".stl")
 bpy.ops.export_mesh.stl(filepath=basename, check_existing=False, axis_forward='Y', axis_up='X', 
 	filter_glob="*.stl", use_selection=True, global_scale=1.0, 
